@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'trabalho_remoto'
+require 'terminal-table'
+
+args = ARGV.dup
+
+salary = Float(args.first.to_s.delete(','))
+
+simulator = TrabalhoRemoto::PjSimples::Simulator.new
+account = simulator.simulate(salary)
+
+puts "Salário: #{salary}"
+puts "Sobra: #{account.balance.round(2)}"
+
+table = Terminal::Table.new
+table.add_row(%w[Valor Descrição Referência])
+
+account.items.each do |item|
+  table.add_row([item.amount.round(2), item.description, item.link])
+end
+
+puts table
