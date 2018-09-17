@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    trabalho_remoto (0.1.0)
+    trabalho_remoto (0.1.0.pre.beta)
+      terminal-table
 
 GEM
   remote: https://rubygems.org/
@@ -21,6 +22,9 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
+    unicode-display_width (1.4.0)
 
 PLATFORMS
   ruby
@@ -32,4 +36,4 @@ DEPENDENCIES
   trabalho_remoto!
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
