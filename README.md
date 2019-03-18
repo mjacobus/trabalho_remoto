@@ -23,7 +23,7 @@ Or install it yourself as:
 ## Usage
 
 ```bash
-trabalho_remoto simulate --salary=14000 # 14 mil reais
+trabalho_remoto 14000 # 14 mil reais
 ```
 
 ## Development
